@@ -19,10 +19,18 @@
     margin-right: 8px;
   }
 
+
   &.outlined {
     background: #FFF;
     border: 1px solid #835afd;
     color: #835afd;
+
+    @media screen and (max-width: 861px) {
+      padding: 0 10px;
+      font-weight: 600;
+      font-size:15px
+    }
+
   }
 
   &:not(:disabled):hover {
@@ -33,4 +41,9 @@
     opacity: 0.6;
     cursor: not-allowed;
   }
+
 }
+
+
+
+ 

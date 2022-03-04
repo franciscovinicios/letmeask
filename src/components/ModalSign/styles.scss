@@ -1,0 +1,108 @@
+.container {
+  .container-icon {
+    position: absolute;
+    left: 45.93%;
+    right: 45.93%;
+    top: 10.68%;
+    bottom: 69.06%;
+    border: 0;
+    background: transparent;
+
+    .sigIn {
+      width: 30px;
+      height: 80px;
+      margin-bottom: 30px;
+      color: #835afd;
+    }
+  }
+
+  h2 {
+    margin-top: 6rem;
+    color: #29292e;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .options-SignIn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      font-size:0.8rem;
+      margin-top: 20px;
+      height: 50px;
+      width: 100%;
+      margin-left: 10px;
+      border-radius: 8px;
+      font-weight: 600;
+      color: #fff;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      cursor: pointer;
+      border: 0;
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(0.9);
+      }
+
+      @media screen and (max-width: 533px) {
+        font-size: 0.7rem;
+      }
+    }
+
+    button.facebook-login {
+      background: #326cfa;
+
+      .facebook-icon {
+        margin-right: 10px;
+        height: 20px;
+
+        @media screen and (max-width: 533px) {
+          margin-right: 5px;
+          margin-left: 17px;
+        }
+      }
+    }
+
+    button.google-login {
+      background: #ea4335;
+
+      .google-icon {
+        margin-right: 20px;
+
+        @media screen and (max-width: 533px) {
+          margin-right: 5px;
+          margin-left: 17px;
+        }
+      }
+    }
+  }
+
+  .container-button {
+    button {
+      
+      background: #e2e2e2;
+      color: #737380;
+      height: 48px;
+      margin-left: 1rem;
+      padding: 14px 32px 15px;
+
+      font-weight: 700;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
+  }
+}

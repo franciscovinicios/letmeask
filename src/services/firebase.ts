@@ -1,7 +1,6 @@
 import { initializeApp } from 'firebase/app'
 
-// importamos todos os servicos que iremos utilizar
-import { getAuth, signInWithPopup } from 'firebase/auth';
+import { getAuth, signInWithPopup} from 'firebase/auth';
 import { getDatabase, ref, push, set, get, child, onValue, off, remove, update } from 'firebase/database'
 
 const firebaseConfig = {

@@ -3,6 +3,12 @@
     padding: 24px;
     border-bottom: 1px solid #e2e2e2;
 
+    @media screen and (max-width: 861px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-around; 
+    }
+
     .content {
       max-width: 1120px;
       margin: 0 auto;
@@ -10,8 +16,19 @@
       justify-content: space-between;
       align-items: center;
 
+      @media screen and (max-width: 861px) {
+        margin: 40px 0 24px;
+      }
+      
+
       > img {
         max-height: 45px;
+
+        @media screen and (max-width: 861px) {
+          margin-right: 12px;
+          display: flex;
+          flex-direction: row;
+        }
       }
 
       > div {
@@ -33,6 +50,11 @@
       margin: 32px 0 24px;
       display: flex;
       align-items: center;
+
+      @media screen and (max-width: 861px) {
+        justify-content: center ;
+      }
+
 
       h1 {
         font-family: 'Poppins', sans-serif;
@@ -61,6 +83,13 @@
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
         resize: vertical;
         min-height: 130px;
+
+        @media screen and (max-width: 368px) {
+          margin: 0 10px;
+          width: 350px;
+        }
+
+        
       }
 
       .form-footer {
@@ -77,12 +106,16 @@
             width: 32px;
             height: 32px;
             border-radius: 50%;
+
+            @media screen and (max-width: 812px) {
+              margin-left: 10px 
+            }
           }
 
           span {
             margin-left: 8px;
             color: #29292e;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 14px;
           }
         }
@@ -100,6 +133,18 @@
             font-size: 14px;
             font-weight: 500;
             cursor: pointer;
+          }
+        }
+
+        button {
+
+          @media screen and (max-width: 806px) {
+            margin-right: 5px;
+          }
+
+          @media screen and (max-width: 450px) {
+            height:40px;
+            padding: 10px 25px;
           }
         }
       }

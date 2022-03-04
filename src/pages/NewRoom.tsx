@@ -2,16 +2,16 @@ import { Link } from 'react-router-dom'
 import { FormEvent, useState } from 'react'
 import { useNavigate } from "react-router-dom";
 
+import { database, ref, push, set } from '../services/firebase';
+import { useAuth } from '../hooks/useAuth'
 
 
 import illustrationImg from '../assets/images/illustration.svg'
 import logo from '../assets/images/logo.svg'
 
-import '../styles/auth.scss'
 import { Button } from '../components/Button'
-import { database, ref, push, set } from '../services/firebase';
-import { useAuth } from '../hooks/useAuth'
 
+import '../styles/home.scss'
 
 
 export function NewRoom() {
@@ -19,8 +19,10 @@ export function NewRoom() {
   const [newRoom, setNewRoom] = useState('')
   const navigate = useNavigate()
 
+
   async function handleCreateRoom(event: FormEvent) {
     event.preventDefault()
+
 
     if (newRoom.trim() === '') {
       return

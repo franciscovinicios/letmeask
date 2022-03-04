@@ -3,6 +3,11 @@
   align-items: stretch;
   height: 100vh;
 
+  @media screen and (max-width: 861px) {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
   aside {
     flex: 7;
 
@@ -15,14 +20,30 @@
 
     padding: 120px 80px;
 
+    @media screen and (max-width: 861px) {
+      padding: 30px 30px;
+      align-items: center;
+    }
+
     img {
       max-width: 320px;
+
+      @media screen and (max-width: 861px) {
+        max-width: 300px;
+        max-height: 200px;
+      }
     }
 
     strong {
       font: 700 36px "Poppins", sans-serif;
       line-height: 42px;
       margin-top: 16px;
+
+      @media screen and (max-width: 861px) {
+        flex-direction: column;
+        font: 700 30px "Poppins", sans-serif;
+        text-align: center;
+      }
     }
 
     p {
@@ -30,6 +51,10 @@
       line-height: 32px;
       margin-top: 16px;
       color: #f8f8f8;
+
+      @media screen and (max-width: 861px) {
+        text-align: center;
+      }
     }
   }
 
@@ -41,6 +66,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 861px) {
+      margin-top: 25px;
+    }
   }
 
   .main-content {
@@ -58,7 +87,11 @@
     h2 {
       font-size: 24px;
       margin: 64px 0 24px;
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
+
+      @media screen and (max-width: 861px) {
+        margin: 40px 0 24px;
+      }
     }
 
     form {
@@ -89,6 +122,44 @@
         color: #e559f9;
       }
     }
+
+    button.facebook-login {
+      background: #326cfa;
+
+      .facebook-icon {
+        margin-right: 10px;
+        height: 20px;
+      }
+    }
+
+    button.google-login {
+      background: #ea4335;
+
+      .google-icon {
+        margin-right: 10px;
+        height: 20px;
+      }
+    }
+
+    .user-info {
+      align-items: center;
+      justify-content: center;
+      margin: 15px 0 15px;
+  
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+  
+      span {
+        display: block;
+        margin-top: 0.5rem;
+        color: #737380;
+        font-size: 14px;
+        font-weight:700;
+      }
+    }
   }
 
   .create-room {
@@ -96,7 +167,6 @@
     height: 50px;
     border-radius: 8px;
     font-weight: 500;
-    background: #ea4335;
     color: #fff;
 
     display: flex;
@@ -111,10 +181,6 @@
     }
     transition: filter 0.2s;
 
-    img {
-      margin-right: 8px;
-    }
-
     &:hover {
       filter: brightness(0.9);
     }
@@ -124,7 +190,7 @@
     font-size: 14px;
     color: #a8a8b3;
 
-    margin: 32px 0;
+    margin: 25px  0 25px;
     display: flex;
     align-items: center;
 
