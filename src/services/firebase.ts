@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app'
 
-import { getAuth, signInWithPopup} from 'firebase/auth';
+import { getAuth, signInWithPopup, signOut } from 'firebase/auth';
 import { getDatabase, ref, push, set, get, child, onValue, off, remove, update } from 'firebase/database'
 
 const firebaseConfig = {
@@ -20,4 +20,4 @@ const auth = getAuth()
 const database = getDatabase(app)
 const SignIn = signInWithPopup
 
-export { initializeApp, auth, database, ref, push, set, get, child, onValue, SignIn, off, remove, update }
+export { initializeApp, auth, database, ref, push, set, get, child, onValue, SignIn, signOut, off, remove, update }

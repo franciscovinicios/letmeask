@@ -42,19 +42,19 @@ export function ModalSign({ isOpen, onRequestClose }: ModalSignProps) {
 
         <div className='container-icon'>
           <FaSignInAlt className="sigIn" />
-        </div>
+        </div> 
 
-        <h2>Faca login para enviar perguntas</h2>
+        <h2>Faça login para enviar perguntas</h2>
 
         <div className="options-SignIn">
           <button onClick={handleCreateRoomFacebook} className= "facebook-login">
             <FaFacebookF className="facebook-icon" />
-            Crie sua sala com o Facebook
+            Facebook
           </button>
 
           <button onClick={handleCreateRoomGoogle} className="google-login" >
             <FaGoogle className="google-icon" />
-            Crie sua sala com o Google
+            Google
           </button>
         </div>
 

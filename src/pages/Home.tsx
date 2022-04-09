@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { FormEvent, useState } from "react";
-import { database, ref, get, child } from "../services/firebase";
+import { FormEvent, useEffect, useState } from "react";
+import { database, ref, get, child, signOut } from "../services/firebase";
 import toast, { Toaster } from 'react-hot-toast';
 import { useAuth } from "../hooks/useAuth";
 
@@ -17,14 +17,22 @@ import '../styles/home.scss'
 
 export function Home() {
   const navigate = useNavigate()
-  const { user, signInWithGoogle, sigInWithFacebook } = useAuth()
+  const { user, signInWithGoogle, sigInWithFacebook, SignOut } = useAuth()
   const [roomCode, setRoomCode] = useState('')
+  // const [loginIsActive, setIsLoginActive] = useState(false)
 
 
+
+  // useEffect(() => {
+  //   if(user) {
+  //     setIsLoginActive(true)
+  //   }
+  // },[])
 
   async function handleCreateRoomGoogle() {
     if (!user) {
       await signInWithGoogle()
+      // setIsLoginActive(true)
     }
     toast.success("Logado com sucesso!", {
       style: {
@@ -43,6 +51,7 @@ export function Home() {
   async function handleCreateRoomFacebook() {
     if (!user) {
       await sigInWithFacebook()
+      // setIsLoginActive(true)
     }
     toast.success("Logado com sucesso!", {
       style: {
@@ -56,6 +65,18 @@ export function Home() {
     });
     navigate('/rooms/new')
   }
+
+  async function handleLogout() {
+    if (user) {
+      await SignOut()
+      // setIsLoginActive(false)
+      // console.log(loginIsActive)
+    }
+  }
+
+
+
+
 
 
   async function handleJoinRoom(event: FormEvent) {
@@ -141,7 +162,10 @@ export function Home() {
           {user && <div className="user-info">
             <img src={user?.avatar} alt={user?.name} />
             <span>{user?.name}</span>
+
+            <button className="button-logout" onClick={handleLogout}>Desconectar</button>
           </div>}
+
 
           {user && <Button onClick={() => navigate('/rooms/new')}>
             Criar uma Sala

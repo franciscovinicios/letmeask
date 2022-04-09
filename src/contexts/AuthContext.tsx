@@ -1,6 +1,6 @@
 import { FacebookAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { createContext, ReactNode, useEffect, useState } from "react";
-import { auth, SignIn } from "../services/firebase";
+import { auth, SignIn, signOut } from "../services/firebase";
 
 
 type User = {
@@ -13,6 +13,7 @@ type AuthContextType = {
   user: User | undefined;
   signInWithGoogle: () => Promise<void>;
   sigInWithFacebook: () => Promise<void>;
+  SignOut: () => Promise<void>;
 }
 
 type AuthContextProviderProps = {
@@ -87,8 +88,15 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
     }
   }
 
+  async function SignOut() {
+    if(user) {
+      await signOut(auth)
+      setUser(undefined)
+    }
+  }
+
   return (
-    <AuthContext.Provider value={{ user, signInWithGoogle, sigInWithFacebook }} >
+    <AuthContext.Provider value={{ user, signInWithGoogle, sigInWithFacebook, SignOut }} >
       {props.children}
     </AuthContext.Provider>
   )

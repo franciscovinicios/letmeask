@@ -122,7 +122,7 @@ export function Room() {
 
         <form onSubmit={handleSendQuestion}>
           <textarea
-            placeholder="O que você quer perguntas?"
+            placeholder="O que você quer perguntar?"
             onChange={event => setNewQuestion(event.target.value)}
             value={newQuestion}
           />
@@ -135,7 +135,7 @@ export function Room() {
               </div>
             ) : (
               <span>Para enviar uma pergunta,
-                <button onClick={() => open()}>faça seu login</button>.</span>
+                <button onClick={() => open()}>Faça seu login.</button></span>
             )}
             <ModalSign
               isOpen={isOpen}

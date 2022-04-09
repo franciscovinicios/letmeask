@@ -28,12 +28,13 @@ body, input, button, textarea {
 }
 
 .react-modal-content {
+  
   width: 100%;
   max-width: 576px;
   background: #FFFFFF;
-  padding:3rem;
+  padding:3rem 3rem;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 
   @media screen and (max-width: 861px) {
     max-width: 70%;
