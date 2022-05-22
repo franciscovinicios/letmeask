@@ -1,23 +1,17 @@
 .container {
-  .icon-alert {
-    position: absolute;
-    left: 42.93%;
-    right: 45.93%;
-    top: 17.68%;
-    bottom: 69.06%;
-    border: 0;
-    background: transparent;
 
-    @media screen and (max-width: 500px) {
-      top: 10%;
-    }
+  .co {
+    margin-top:-3rem;
+  }
+  .icon-alert {
+    display: flex;
+    justify-content:center;
+
   }
 
   h2 {
-    margin-top: 6rem;
     color: #29292e;
     font-size: 2rem;
-    margin-bottom: 2rem;
     text-align: center;
   }
 
@@ -32,7 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 3rem;
+    margin-top: 3rem; 
     margin-bottom: 3rem;
 
     button {

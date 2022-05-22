@@ -19,23 +19,14 @@ export function Home() {
   const navigate = useNavigate()
   const { user, signInWithGoogle, sigInWithFacebook, SignOut } = useAuth()
   const [roomCode, setRoomCode] = useState('')
-  // const [loginIsActive, setIsLoginActive] = useState(false)
 
-
-
-  // useEffect(() => {
-  //   if(user) {
-  //     setIsLoginActive(true)
-  //   }
-  // },[])
 
   async function handleCreateRoomGoogle() {
     if (!user) {
       await signInWithGoogle()
-      // setIsLoginActive(true)
     }
     toast.success("Logado com sucesso!", {
-      style: {
+      style: { 
         background: "#68D391",
         color: "#FFF"
       },
@@ -51,7 +42,6 @@ export function Home() {
   async function handleCreateRoomFacebook() {
     if (!user) {
       await sigInWithFacebook()
-      // setIsLoginActive(true)
     }
     toast.success("Logado com sucesso!", {
       style: {
@@ -69,8 +59,17 @@ export function Home() {
   async function handleLogout() {
     if (user) {
       await SignOut()
-      // setIsLoginActive(false)
-      // console.log(loginIsActive)
+      toast.success("Voce foi desconectado!", {
+        style: {
+          background: "#68D391",
+          color: "#FFF"
+        },
+        iconTheme: {
+          primary: "#FFF",
+          secondary: "#68D391"
+        }
+      });
+      
     }
   }
 

@@ -1,13 +1,8 @@
 .container {
   .container-icon {
-    position: absolute;
-    left: 45.93%;
-    right: 45.93%;
-    top: 5.68%;
-    bottom: 69.06%;
-    border: 0;
-    background: transparent;
-
+    display: flex;
+    align-items: center; 
+    justify-content: center;
     .sigIn {
       width: 30px;
       height: 80px;
@@ -17,7 +12,7 @@
   }
 
   h2 {
-    margin-top: 6rem;
+    margin-top: 1rem;
     color: #29292e;
     font-size: 2rem;
     margin-bottom: 2rem;

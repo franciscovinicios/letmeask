@@ -10,7 +10,7 @@ body {
 }
 
 body, input, button, textarea {
-  font: 400 16px 'Roboto', sans-serif;
+  font: 400 1rem 'Roboto', sans-serif;
 }
 
 .react-modal-overlay {
@@ -33,7 +33,6 @@ body, input, button, textarea {
   max-width: 576px;
   background: #FFFFFF;
   padding:3rem 3rem;
-  position: relative;
   border-radius: 0.5rem;
 
   @media screen and (max-width: 861px) {
@@ -43,16 +42,3 @@ body, input, button, textarea {
 
 }
 
-.react-modal-close {
-  position: absolute;
-  right: 1.5rem;
-  top: 1.5rem;
-  border: 0;
-  background: transparent;
-
-  transition: filter 0.2s;
-
-  &:hover {
-    filter: brightness(0.8);
-  }
-}

@@ -18,15 +18,16 @@
     flex-direction: column;
     justify-content: center;
 
-    padding: 120px 80px;
+    padding: 8rem 80px;  
 
     @media screen and (max-width: 861px) {
-      padding: 30px 30px;
+      padding: 30px 4.5rem;
       align-items: center;
     }
 
     img {
       max-width: 320px;
+      
 
       @media screen and (max-width: 861px) {
         max-width: 300px;
@@ -161,6 +162,7 @@
       }
 
       .button-logout {
+        background: none;
         margin-top: 1rem;
         width: 10rem;
         padding: 0.2rem;
@@ -169,7 +171,6 @@
         border: none;
         cursor: pointer;
         color: #F063F0;
-        background: #fff;
         font-weight: 600;
       }
     }
